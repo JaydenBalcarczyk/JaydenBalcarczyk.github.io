@@ -16,7 +16,7 @@ website:
 
 format:
   html:
-    theme: 
+    theme: quartz 
       light: flatly
       dark: darkly
     mainfont: system-ui; 
