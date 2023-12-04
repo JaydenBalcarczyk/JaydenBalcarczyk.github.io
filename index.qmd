@@ -1,5 +1,5 @@
 ---
-title: "YOUR NAME"
+title: "Jayden Balcarczyk"
 about:
   template: trestles  # jolla  trestles  solana  marquee  broadside
   image: img/profile.png
@@ -9,33 +9,34 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://linkedin.com/in/jayden-balcarczyk-709427264
     - icon: instagram
       text: Instagram
-      href: https://instagram.com
+      href: https://www.instagram.com/jayden.balcarczyk/
     - icon: github
       text: GitHub
-      href: https://github.com
+      href: https://github.com/JaydenBalcarczyk/JaydenBalcarczyk.github.io
     - icon: file-earmark-pdf
       text: Resumé
       href: https://GITHUB_USERNAME.github.io/resume-example.pdf
     - icon: mailbox
       text: Email
-      href: mailto:YOUR_EMAIL@geneseo.edu
+      href: mailto:jtb99@geneseo.edu
 
 ---
 
 
-Finley Malloc majors in Data Analytics at SUNY Geneseo. When not working on data analytics, Finley enjoys spending time unicycling and playing with her pet iguana.
+Jayden Balcarczyk majors in Business Administration at SUNY Geneseo. When not working on academics, Jayden enjoys spending time playing hockey, spending time with friends and family, and listening to music.
 
 ## Education
 
 State University of New York at Geneseo | Geneseo, NY <br>
-B.S. in Data Analytics | Aug 2022 - May 2026 <br>
-Minor in Business Administration 
+Bachelors in Business Administration | Aug 2022 - December 2025 <br>
+Minor in Marketing
 
 ## Experience
 
-Starbucks Analytics | Data Analyst Intern | May 2024 - Aug 2024
+Hammerl Amusments | Operator | May 2021 - present <br>
+Rich E. Landscaping | Laborer | June 2023- present 
 
 
