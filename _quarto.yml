@@ -16,8 +16,8 @@ website:
 
 format:
   html:
-    theme: quartz 
-      light: flatly
+    theme:  
+      light: quartz
       dark: darkly
     mainfont: system-ui; 
     highlight-style: atom-one
