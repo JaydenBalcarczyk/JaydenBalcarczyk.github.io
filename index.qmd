@@ -6,7 +6,7 @@ about:
   image-width: 15em
   image-shape: round # rectangle  round  rounded
   
-  links:
+  links: 
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/jayden-balcarczyk-709427264
