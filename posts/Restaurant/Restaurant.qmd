@@ -1,0 +1,171 @@
+---
+title: "Restaurant"
+author: "Jayden Balcarczyk"
+date: "2023-12-7"
+categories: [Restaurant, code, analysis]
+image: "Restaurant.png"
+
+execute: 
+  warning: false
+  message: false
+  
+toc: true
+---
+```{r}
+#| include: false
+
+library(knitr)
+library(rmarkdown)
+library(tidyverse)
+library(skimr)
+library(ggthemes)
+library(hrbrthemes)
+
+theme_set(theme_ipsum()+
+          theme(strip.background =element_rect(fill="lightgray"),
+                axis.title.x  = element_text(angle = 0,
+                                            size = rel(1.5),
+                                            margin = margin(10,0,0,0)),
+                axis.title.y  = element_text(angle = 0,
+                                            size = rel(1.5),
+                                            margin = margin(0,10,0,0))
+                )
+          )
+```
+
+Let's analyze the `starwars` data:
+
+```{r}
+Restaurants <- read_csv("https://bcdanl.github.io/data/DOHMH_NYC_Restaurant_Inspection.csv")
+```
+
+
+```{r}
+#| results: asis
+rmarkdown::paged_table(Restaurants) 
+```
+
+
+
+## Variable Description for `starwars` data.frame
+
+The following describes the variables in the `starwars` data.frame.
+
+
+- `CAMIS`
+This is an unique identifier for the entity (restaurant);
+10-digit integer
+
+- `BORO`
+Borough in which the entity (restaurant) is located.;
+• 1 = MANHATTAN
+• 2 = BRONX
+• 3 = BROOKLYN
+• 4 = QUEENS
+• 5 = STATEN ISLAND
+• 0 = Missing;
+
+- `CUISINE DESCRIPTION`
+This field describes the entity (restaurant) cuisine.
+
+- `ACTION`
+This field represents the actions that is associated with each restaurant inspection. ;
+• Violations were cited in the following area(s).
+• No violations were recorded at the time of this inspection.
+• Establishment re-opened by DOHMH
+• Establishment re-closed by DOHMH
+• Establishment Closed by DOHMH.
+• Violations were cited in the following area(s) and those requiring immediate action were addressed.
+
+
+- `VIOLATION CODE`
+Violation code associated with an establishment (restaurant) inspection
+
+- `VIOLATION DESCRIPTION`
+Violation description associated with an establishment (restaurant) inspection
+
+- `CRITICAL FLAG`
+Indicator of critical violation;
+• Critical
+• Not Critical
+• Not Applicable;
+Critical violations are those most likely to contribute to food-borne illness
+
+- `SCORE`
+Total score for a particular inspection;
+
+- `GRADE`
+Grade associated with the inspection;
+• N = Not Yet Graded
+• A = Grade A
+• B = Grade B
+• C = Grade C
+• Z = Grade Pending
+• P = Grade Pending issued on re-opening following an initial inspection that resulted in a closure
+
+
+
+## Mean, Standard Deviation, First Quartile, Median, Thrid Quartile, and Max of `Score` for each `GRADE`of restaurants
+
+```{r}
+Restaurants %>% group_by(GRADE) %>% skim(SCORE) %>% select(-n_missing)
+
+```
+
+## Number of restaurants with an `A` `Grade` in NYC
+## The percentage of restaurants in NYC with a `C` `Grade`
+
+```{r}
+freq <- as.data.frame( table(Restaurants$GRADE) )
+prop <- as.data.frame( 100 * prop.table(table(Restaurants$GRADE)) )
+
+```
+
+## Histograms
+
+```{r}
+ggplot(Restaurants) +
+  geom_histogram(aes(x = SCORE), binwidth = 1 ) +
+  facet_grid( `CRITICAL FLAG` ~ GRADE )
+```
+
+## Histograms with varying x- scale across facets
+
+```{r}
+ggplot(Restaurants) +
+  geom_histogram(aes(x = SCORE), binwidth = 1 ) +
+  facet_grid( `CRITICAL FLAG` ~ GRADE, scales = 'free_x' )
+```
+
+## 10 most common `Cuisine Description` values and the `Cuisine Description` value that has the highest proportion of `Grade A`
+
+```{r}
+q2e <- Restaurants %>% 
+  group_by(`CUISINE DESCRIPTION`) %>% 
+  mutate(n = n()) %>% 
+  ungroup() %>% 
+  filter(dense_rank(-n) <= 10) %>% 
+  group_by(`CUISINE DESCRIPTION`, GRADE) %>% 
+  count() %>% 
+  group_by(`CUISINE DESCRIPTION`) %>% 
+  mutate(prop_A = n / sum(n)) %>% 
+  filter(GRADE == 'A') %>% 
+  arrange(-prop_A)
+```
+
+## 3 most common names of restaurants in each `Boro` and the most common `DBA` value in NYC
+
+```{r} 
+q2f <- Restaurants %>% 
+  select(DBA, BORO) %>% 
+  group_by(BORO, DBA) %>% 
+  summarize(n = n()) %>% 
+  mutate(ranking = dense_rank(-n)) %>% 
+  filter(ranking <= 3) %>% 
+  arrange(BORO, ranking)
+
+q2f_ <- Restaurants %>% 
+  group_by(DBA) %>% 
+  count() %>% 
+  arrange(-n)
+```

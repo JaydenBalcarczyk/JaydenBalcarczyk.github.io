@@ -2,9 +2,10 @@
   {
     "listing": "/blog-listing.html",
     "items": [
-      "/posts/beer-markets/beer-markets.html",
-      "/posts/starwars/starwars_df.html",
-      "/posts/post-with-code/index.html",
+      "/posts/Restaurant/Restaurant.html",
+      "/posts/NFL 2022/NFL2022.html",
+      "/posts/Beer Markets/blog-1.html",
+      "/posts/Spotify/Spotify.html",
       "/posts/welcome/index.html"
     ]
   }
