@@ -2,7 +2,7 @@
 title: "Spotify"
 author: "Jayden Balcarczyk"
 date: "2023-12-7"
-categories: [spotify, code, analysis]
+categories: [Spotify, code, analysis]
 image: "spotify.png"
 
 execute: 
@@ -88,10 +88,5 @@ ggplot(Q1c,
 
 ```
 
-## Histogram
-
-```{r}
-
-```
 
 
