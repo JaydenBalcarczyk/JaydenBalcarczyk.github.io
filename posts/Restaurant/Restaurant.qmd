@@ -15,6 +15,7 @@ toc: true
 #| include: false
 
 library(knitr)
+library(dplyr)
 library(rmarkdown)
 library(tidyverse)
 library(skimr)
@@ -33,23 +34,23 @@ theme_set(theme_ipsum()+
           )
 ```
 
-Let's analyze the `starwars` data:
+Let's analyze the `restaurant` data:
 
 ```{r}
-Restaurants <- read_csv("https://bcdanl.github.io/data/DOHMH_NYC_Restaurant_Inspection.csv")
+restaurant <- read_csv("https://bcdanl.github.io/data/DOHMH_NYC_Restaurant_Inspection.csv")
 ```
 
 
 ```{r}
 #| results: asis
-rmarkdown::paged_table(Restaurants) 
+rmarkdown::paged_table(restaurant) 
 ```
 
 
 
-## Variable Description for `starwars` data.frame
+## Variable Description for `restaurant` data.frame
 
-The following describes the variables in the `starwars` data.frame.
+The following describes the variables in the `restaurant` data.frame.
 
 
 - `CAMIS`
@@ -103,69 +104,27 @@ Grade associated with the inspection;
 • Z = Grade Pending
 • P = Grade Pending issued on re-opening following an initial inspection that resulted in a closure
 
-
-
-## Mean, Standard Deviation, First Quartile, Median, Thrid Quartile, and Max of `Score` for each `GRADE`of restaurants
-
+## Q1c.
+* Provide both (1) ggplot code and (2) a simple comment to describe how the distribution of SCORE varies by GRADE and CRITICAL FLAG.
+  + 
 ```{r}
-Restaurants %>% group_by(GRADE) %>% skim(SCORE) %>% select(-n_missing)
-
+ggplot(restaurant) +
+  geom_boxplot(aes(x = SCORE, y = GRADE, fill = GRADE) ) +
+  facet_grid( `CRITICAL FLAG` ~ . )
 ```
 
-## Number of restaurants with an `A` `Grade` in NYC
-## The percentage of restaurants in NYC with a `C` `Grade`
-
+  + Histograms
 ```{r}
-freq <- as.data.frame( table(Restaurants$GRADE) )
-prop <- as.data.frame( 100 * prop.table(table(Restaurants$GRADE)) )
-
-```
-
-## Histograms
-
-```{r}
-ggplot(Restaurants) +
+ggplot(restaurant) +
   geom_histogram(aes(x = SCORE), binwidth = 1 ) +
   facet_grid( `CRITICAL FLAG` ~ GRADE )
 ```
 
-## Histograms with varying x- scale across facets
-
+  + Histograms with varying x- and y- scales across facets
 ```{r}
-ggplot(Restaurants) +
+ggplot(restaurant) +
   geom_histogram(aes(x = SCORE), binwidth = 1 ) +
-  facet_grid( `CRITICAL FLAG` ~ GRADE, scales = 'free_x' )
+  facet_wrap( `CRITICAL FLAG` ~ GRADE, scales = 'free' )
 ```
 
-## 10 most common `Cuisine Description` values and the `Cuisine Description` value that has the highest proportion of `Grade A`
 
-```{r}
-q2e <- Restaurants %>% 
-  group_by(`CUISINE DESCRIPTION`) %>% 
-  mutate(n = n()) %>% 
-  ungroup() %>% 
-  filter(dense_rank(-n) <= 10) %>% 
-  group_by(`CUISINE DESCRIPTION`, GRADE) %>% 
-  count() %>% 
-  group_by(`CUISINE DESCRIPTION`) %>% 
-  mutate(prop_A = n / sum(n)) %>% 
-  filter(GRADE == 'A') %>% 
-  arrange(-prop_A)
-```
-
-## 3 most common names of restaurants in each `Boro` and the most common `DBA` value in NYC
-
-```{r} 
-q2f <- Restaurants %>% 
-  select(DBA, BORO) %>% 
-  group_by(BORO, DBA) %>% 
-  summarize(n = n()) %>% 
-  mutate(ranking = dense_rank(-n)) %>% 
-  filter(ranking <= 3) %>% 
-  arrange(BORO, ranking)
-
-q2f_ <- Restaurants %>% 
-  group_by(DBA) %>% 
-  count() %>% 
-  arrange(-n)
-```

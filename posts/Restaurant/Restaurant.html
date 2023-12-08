@@ -178,14 +178,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#variable-description-for-starwars-data.frame" id="toc-variable-description-for-starwars-data.frame" class="nav-link active" data-scroll-target="#variable-description-for-starwars-data.frame">Variable Description for <code>starwars</code> data.frame</a></li>
-  <li><a href="#mean-standard-deviation-first-quartile-median-thrid-quartile-and-max-of-score-for-each-gradeof-restaurants" id="toc-mean-standard-deviation-first-quartile-median-thrid-quartile-and-max-of-score-for-each-gradeof-restaurants" class="nav-link" data-scroll-target="#mean-standard-deviation-first-quartile-median-thrid-quartile-and-max-of-score-for-each-gradeof-restaurants">Mean, Standard Deviation, First Quartile, Median, Thrid Quartile, and Max of <code>Score</code> for each <code>GRADE</code>of restaurants</a></li>
-  <li><a href="#number-of-restaurants-with-an-a-grade-in-nyc" id="toc-number-of-restaurants-with-an-a-grade-in-nyc" class="nav-link" data-scroll-target="#number-of-restaurants-with-an-a-grade-in-nyc">Number of restaurants with an <code>A</code> <code>Grade</code> in NYC</a></li>
-  <li><a href="#the-percentage-of-restaurants-in-nyc-with-a-c-grade" id="toc-the-percentage-of-restaurants-in-nyc-with-a-c-grade" class="nav-link" data-scroll-target="#the-percentage-of-restaurants-in-nyc-with-a-c-grade">The percentage of restaurants in NYC with a <code>C</code> <code>Grade</code></a></li>
-  <li><a href="#histograms" id="toc-histograms" class="nav-link" data-scroll-target="#histograms">Histograms</a></li>
-  <li><a href="#histograms-with-varying-x--scale-across-facets" id="toc-histograms-with-varying-x--scale-across-facets" class="nav-link" data-scroll-target="#histograms-with-varying-x--scale-across-facets">Histograms with varying x- scale across facets</a></li>
-  <li><a href="#most-common-cuisine-description-values-and-the-cuisine-description-value-that-has-the-highest-proportion-of-grade-a" id="toc-most-common-cuisine-description-values-and-the-cuisine-description-value-that-has-the-highest-proportion-of-grade-a" class="nav-link" data-scroll-target="#most-common-cuisine-description-values-and-the-cuisine-description-value-that-has-the-highest-proportion-of-grade-a">10 most common <code>Cuisine Description</code> values and the <code>Cuisine Description</code> value that has the highest proportion of <code>Grade A</code></a></li>
-  <li><a href="#most-common-names-of-restaurants-in-each-boro-and-the-most-common-dba-value-in-nyc" id="toc-most-common-names-of-restaurants-in-each-boro-and-the-most-common-dba-value-in-nyc" class="nav-link" data-scroll-target="#most-common-names-of-restaurants-in-each-boro-and-the-most-common-dba-value-in-nyc">3 most common names of restaurants in each <code>Boro</code> and the most common <code>DBA</code> value in NYC</a></li>
+  <li><a href="#variable-description-for-restaurant-data.frame" id="toc-variable-description-for-restaurant-data.frame" class="nav-link active" data-scroll-target="#variable-description-for-restaurant-data.frame">Variable Description for <code>restaurant</code> data.frame</a></li>
+  <li><a href="#q1c." id="toc-q1c." class="nav-link" data-scroll-target="#q1c.">Q1c.</a></li>
   </ul>
 </nav>
     </div>
@@ -197,9 +191,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Let’s analyze the <code>starwars</code> data:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Restaurants <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://bcdanl.github.io/data/DOHMH_NYC_Restaurant_Inspection.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>restaurant <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://bcdanl.github.io/data/DOHMH_NYC_Restaurant_Inspection.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>(Restaurants) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>(restaurant) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div data-pagedtable="false">
@@ -208,9 +202,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 </div>
 </div>
-<section id="variable-description-for-starwars-data.frame" class="level2">
-<h2 class="anchored" data-anchor-id="variable-description-for-starwars-data.frame">Variable Description for <code>starwars</code> data.frame</h2>
-<p>The following describes the variables in the <code>starwars</code> data.frame.</p>
+<section id="variable-description-for-restaurant-data.frame" class="level2">
+<h2 class="anchored" data-anchor-id="variable-description-for-restaurant-data.frame">Variable Description for <code>restaurant</code> data.frame</h2>
+<p>The following describes the variables in the <code>restaurant</code> data.frame.</p>
 <ul>
 <li><p><code>CAMIS</code> This is an unique identifier for the entity (restaurant); 10-digit integer</p></li>
 <li><p><code>BORO</code> Borough in which the entity (restaurant) is located.; • 1 = MANHATTAN • 2 = BRONX • 3 = BROOKLYN • 4 = QUEENS • 5 = STATEN ISLAND • 0 = Missing;</p></li>
@@ -223,186 +217,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><code>GRADE</code> Grade associated with the inspection; • N = Not Yet Graded • A = Grade A • B = Grade B • C = Grade C • Z = Grade Pending • P = Grade Pending issued on re-opening following an initial inspection that resulted in a closure</p></li>
 </ul>
 </section>
-<section id="mean-standard-deviation-first-quartile-median-thrid-quartile-and-max-of-score-for-each-gradeof-restaurants" class="level2">
-<h2 class="anchored" data-anchor-id="mean-standard-deviation-first-quartile-median-thrid-quartile-and-max-of-score-for-each-gradeof-restaurants">Mean, Standard Deviation, First Quartile, Median, Thrid Quartile, and Max of <code>Score</code> for each <code>GRADE</code>of restaurants</h2>
+<section id="q1c." class="level2">
+<h2 class="anchored" data-anchor-id="q1c.">Q1c.</h2>
+<ul>
+<li>Provide both (1) ggplot code and (2) a simple comment to describe how the distribution of SCORE varies by GRADE and CRITICAL FLAG.
+<ul>
+<li></li>
+</ul></li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Restaurants <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(GRADE) <span class="sc">%&gt;%</span> <span class="fu">skim</span>(SCORE) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>n_missing)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(restaurant) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> SCORE, <span class="at">y =</span> GRADE, <span class="at">fill =</span> GRADE) ) <span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>( <span class="st">`</span><span class="at">CRITICAL FLAG</span><span class="st">`</span> <span class="sc">~</span> . )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped small">
-<caption>Data summary</caption>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Name</td>
-<td style="text-align: left;">Piped data</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Number of rows</td>
-<td style="text-align: left;">17633</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Number of columns</td>
-<td style="text-align: left;">12</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">_______________________</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Column type frequency:</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">numeric</td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">________________________</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Group variables</td>
-<td style="text-align: left;">GRADE</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: numeric</strong></p>
-<table class="table table-sm table-striped small">
-<colgroup>
-<col style="width: 19%">
-<col style="width: 8%">
-<col style="width: 19%">
-<col style="width: 8%">
-<col style="width: 8%">
-<col style="width: 4%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 6%">
-<col style="width: 8%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">skim_variable</th>
-<th style="text-align: left;">GRADE</th>
-<th style="text-align: right;">complete_rate</th>
-<th style="text-align: right;">mean</th>
-<th style="text-align: right;">sd</th>
-<th style="text-align: right;">p0</th>
-<th style="text-align: right;">p25</th>
-<th style="text-align: right;">p50</th>
-<th style="text-align: right;">p75</th>
-<th style="text-align: right;">p100</th>
-<th style="text-align: left;">hist</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">SCORE</td>
-<td style="text-align: left;">A</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">9.26</td>
-<td style="text-align: right;">3.42</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">13</td>
-<td style="text-align: left;">▁▂▂▅▇</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">SCORE</td>
-<td style="text-align: left;">B</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">21.03</td>
-<td style="text-align: right;">4.16</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">24</td>
-<td style="text-align: right;">36</td>
-<td style="text-align: left;">▁▁▇▇▁</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">SCORE</td>
-<td style="text-align: left;">C</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">38.56</td>
-<td style="text-align: right;">10.83</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">31</td>
-<td style="text-align: right;">36</td>
-<td style="text-align: right;">44</td>
-<td style="text-align: right;">86</td>
-<td style="text-align: left;">▁▇▇▂▁</td>
-</tr>
-</tbody>
-</table>
+<p><img src="Restaurant_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="number-of-restaurants-with-an-a-grade-in-nyc" class="level2">
-<h2 class="anchored" data-anchor-id="number-of-restaurants-with-an-a-grade-in-nyc">Number of restaurants with an <code>A</code> <code>Grade</code> in NYC</h2>
-</section>
-<section id="the-percentage-of-restaurants-in-nyc-with-a-c-grade" class="level2">
-<h2 class="anchored" data-anchor-id="the-percentage-of-restaurants-in-nyc-with-a-c-grade">The percentage of restaurants in NYC with a <code>C</code> <code>Grade</code></h2>
+<ul>
+<li>Histograms</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>freq <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>( <span class="fu">table</span>(Restaurants<span class="sc">$</span>GRADE) )</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>prop <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>( <span class="dv">100</span> <span class="sc">*</span> <span class="fu">prop.table</span>(<span class="fu">table</span>(Restaurants<span class="sc">$</span>GRADE)) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(restaurant) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> SCORE), <span class="at">binwidth =</span> <span class="dv">1</span> ) <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>( <span class="st">`</span><span class="at">CRITICAL FLAG</span><span class="st">`</span> <span class="sc">~</span> GRADE )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Restaurant_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
-</section>
-<section id="histograms" class="level2">
-<h2 class="anchored" data-anchor-id="histograms">Histograms</h2>
+</div>
+<ul>
+<li>Histograms with varying x- and y- scales across facets</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Restaurants) <span class="sc">+</span></span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(restaurant) <span class="sc">+</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> SCORE), <span class="at">binwidth =</span> <span class="dv">1</span> ) <span class="sc">+</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>( <span class="st">`</span><span class="at">CRITICAL FLAG</span><span class="st">`</span> <span class="sc">~</span> GRADE )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>( <span class="st">`</span><span class="at">CRITICAL FLAG</span><span class="st">`</span> <span class="sc">~</span> GRADE, <span class="at">scales =</span> <span class="st">'free'</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="Restaurant_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-</section>
-<section id="histograms-with-varying-x--scale-across-facets" class="level2">
-<h2 class="anchored" data-anchor-id="histograms-with-varying-x--scale-across-facets">Histograms with varying x- scale across facets</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Restaurants) <span class="sc">+</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> SCORE), <span class="at">binwidth =</span> <span class="dv">1</span> ) <span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>( <span class="st">`</span><span class="at">CRITICAL FLAG</span><span class="st">`</span> <span class="sc">~</span> GRADE, <span class="at">scales =</span> <span class="st">'free_x'</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Restaurant_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</section>
-<section id="most-common-cuisine-description-values-and-the-cuisine-description-value-that-has-the-highest-proportion-of-grade-a" class="level2">
-<h2 class="anchored" data-anchor-id="most-common-cuisine-description-values-and-the-cuisine-description-value-that-has-the-highest-proportion-of-grade-a">10 most common <code>Cuisine Description</code> values and the <code>Cuisine Description</code> value that has the highest proportion of <code>Grade A</code></h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>q2e <span class="ot">&lt;-</span> Restaurants <span class="sc">%&gt;%</span> </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="st">`</span><span class="at">CUISINE DESCRIPTION</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">dense_rank</span>(<span class="sc">-</span>n) <span class="sc">&lt;=</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="st">`</span><span class="at">CUISINE DESCRIPTION</span><span class="st">`</span>, GRADE) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="st">`</span><span class="at">CUISINE DESCRIPTION</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prop_A =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(GRADE <span class="sc">==</span> <span class="st">'A'</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>prop_A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="most-common-names-of-restaurants-in-each-boro-and-the-most-common-dba-value-in-nyc" class="level2">
-<h2 class="anchored" data-anchor-id="most-common-names-of-restaurants-in-each-boro-and-the-most-common-dba-value-in-nyc">3 most common names of restaurants in each <code>Boro</code> and the most common <code>DBA</code> value in NYC</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>q2f <span class="ot">&lt;-</span> Restaurants <span class="sc">%&gt;%</span> </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(DBA, BORO) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(BORO, DBA) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ranking =</span> <span class="fu">dense_rank</span>(<span class="sc">-</span>n)) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(ranking <span class="sc">&lt;=</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(BORO, ranking)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>q2f_ <span class="ot">&lt;-</span> Restaurants <span class="sc">%&gt;%</span> </span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(DBA) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

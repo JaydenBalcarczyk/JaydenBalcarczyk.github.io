@@ -1,9 +1,9 @@
 ---
-title: "Starwars"
-author: "Your Name"
-date: "2023-10-30"
-categories: [starwars, code, analysis]
-image: "image.png"
+title: "Spotify"
+author: "Jayden Balcarczyk"
+date: "2023-12-7"
+categories: [spotify, code, analysis]
+image: "spotify.png"
 
 execute: 
   warning: false
@@ -33,65 +33,64 @@ theme_set(theme_ipsum()+
           )
 ```
 
-Let's analyze the `starwars` data:
+Let's analyze the `spotify_all` data:
 
 ```{r}
-starwars <- read_csv("https://bcdanl.github.io/data/starwars.csv")
+spotify_all <- read_csv("https://bcdanl.github.io/data/spotify_all.csv")
 ```
 
 
 ```{r}
 #| results: asis
-rmarkdown::paged_table(starwars) 
+rmarkdown::paged_table(spotify_all) 
 ```
 
 
 
-## Variable Description for `starwars` data.frame
+## Variable Description for `spotify_all` data.frame
 
-The following describes the variables in the `starwars` data.frame.
+The following describes the variables in the `spotify_all` data.frame.
 
+* `pid`: playlist ID; unique ID for playlist
 
-- `films`
-List of films the character appeared in
+* `playlist_name`: a name of playlist
 
-- `name`
-Name of the character
+* `pos`: a position of the track within a playlist (starting from 0)
 
-- `species`
-Name of species
+* `artist_name`: name of the track’s primary artist
 
-- `height`
-Height (cm)
+* `track_name`: name of the track
 
-- `mass`
-Weight (kg)
+* `duration_ms`: duration of the track in milliseconds
 
-- `hair_color`, `skin_color`, `eye_color`
-Hair, skin, and eye colors
-
-- `birth_year`
-Year born (BBY = Before Battle of Yavin)
-
-- `sex`
-The biological sex of the character, namely male, female, hermaphroditic, or none (as in the case for Droids).
-
-- `gender`
-The gender role or gender identity of the character as determined by their personality or the way they were programmed (as in the case for Droids).
-
-- `homeworld`
-Name of homeworld
+* `album_name`: name of the track’s album
 
 
-## Human vs. Droid
+
+
+## Q1c. 
+* Provide both (1) ggplot codes and (2) a couple of sentences to describe the relationship between pos and the ten most popular artists.
 
 ```{r}
-ggplot(data = 
-         starwars %>% 
-         filter(species %in% c("Human", "Droid"))) +
-  geom_boxplot(aes(x = species, y = mass, 
-                   fill = species),
-               show.legend = FALSE)
+Q1c <- spotify_all %>% 
+  group_by(artist_name) %>% 
+  mutate(n_popular_artist = n()) %>% 
+  ungroup() %>% 
+  mutate( artist_ranking = dense_rank( desc(n_popular_artist) ) ) %>% 
+  filter( artist_ranking <= 10) 
+ggplot(Q1c,
+       aes(x = pos, y = fct_reorder(artist_name, -artist_ranking)) ) +
+  geom_boxplot() +
+  stat_summary(
+    fun = mean,
+    color = 'red'
+  )
+
+```
+
+## Histogram
+
+```{r}
 
 ```
 
