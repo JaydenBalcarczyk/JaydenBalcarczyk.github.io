@@ -40,7 +40,6 @@ theme_set(theme_ipsum()+
 ```
 
 
-
 # Loading R packages
 
 About this project :clap:
@@ -70,7 +69,5 @@ billboard <- read_csv('https://bcdanl.github.io/data/billboard.csv')
 * Which artist(s) have the most number of tracks in billboard data.frame?
 * Do not double-count an artist’s tracks if they appear in multiple weeks.
 
-```{r}
 
-```
-
+#Q1c.
