@@ -11,6 +11,8 @@ website:
         href: project.qmd
       - text: Blog
         href: blog-listing.qmd
+      - text: Classwork
+        href: Classwork.qmd
   page-footer: 
     center: "Powered with GitHub and Quarto<br>© Jayden Balcarczyk, 2023"
 
