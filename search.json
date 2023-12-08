@@ -397,5 +397,12 @@
     "title": "Spotify",
     "section": "Histogram",
     "text": "Histogram\n\nggplot(Q1c) +\n  geom_histogram(aes(x = pos, fill = artist_name), binwidth = 1, position = \"dodge\") +\n  facet_wrap(~artist_name, scales = \"free\") +\n  labs(title = \"Distribution of pos for the Ten Most Popular Artists\",\n       x = \"pos\",\n       y = \"Frequency\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "Classwork.html",
+    "href": "Classwork.html",
+    "title": "Classwork",
+    "section": "",
+    "text": "2 Question 1 - Billboard Charts\n\nThe following data is for Question 1:\n\n\nbillboard <- read_csv('https://bcdanl.github.io/data/billboard.csv')\n\n\n\n3 Q1a.\n\nDescribe how the distribution of rating varies across week 1, week 2, and week 3 using the faceted histogram.\n\n\n\n\n#Q1b. * Which artist(s) have the most number of tracks in billboard data.frame? * Do not double-count an artist’s tracks if they appear in multiple weeks."
   }
 ]

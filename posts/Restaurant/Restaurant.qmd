@@ -106,7 +106,7 @@ Grade associated with the inspection;
 
 ## Q1c.
 * Provide both (1) ggplot code and (2) a simple comment to describe how the distribution of SCORE varies by GRADE and CRITICAL FLAG.
-  + 
+
 ```{r}
 ggplot(restaurant) +
   geom_boxplot(aes(x = SCORE, y = GRADE, fill = GRADE) ) +
