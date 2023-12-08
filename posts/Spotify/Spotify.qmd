@@ -1,9 +1,9 @@
 ---
 title: "Spotify"
 author: "Jayden Balcarczyk"
-date: "2023-12-7"
+date: "2023-12-8"
 categories: [Spotify, code, analysis]
-image: "spotify.png"
+image: "Spotify.png"
 
 execute: 
   warning: false
@@ -15,6 +15,7 @@ toc: true
 #| include: false
 
 library(knitr)
+library(dplyr)
 library(rmarkdown)
 library(tidyverse)
 library(skimr)
@@ -46,10 +47,10 @@ rmarkdown::paged_table(spotify_all)
 ```
 
 
-
 ## Variable Description for `spotify_all` data.frame
 
 The following describes the variables in the `spotify_all` data.frame.
+
 
 * `pid`: playlist ID; unique ID for playlist
 
@@ -66,9 +67,7 @@ The following describes the variables in the `spotify_all` data.frame.
 * `album_name`: name of the track’s album
 
 
-
-
-## Q1c. 
+## Q1c.
 * Provide both (1) ggplot codes and (2) a couple of sentences to describe the relationship between pos and the ten most popular artists.
 
 ```{r}
@@ -85,8 +84,17 @@ ggplot(Q1c,
     fun = mean,
     color = 'red'
   )
-
 ```
 
+## Histogram
 
-
+```{r}
+ggplot(Q1c) +
+  geom_histogram(aes(x = pos, fill = artist_name), binwidth = 1, position = "dodge") +
+  facet_wrap(~artist_name, scales = "free") +
+  labs(title = "Distribution of pos for the Ten Most Popular Artists",
+       x = "pos",
+       y = "Frequency") +
+  theme_minimal()
+```
+ 
