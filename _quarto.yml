@@ -17,7 +17,7 @@ website:
 format:
   html:
     theme:  
-      light: quartz
+      light: cyborg
       dark: darkly
     mainfont: system-ui; 
     highlight-style: atom-one
