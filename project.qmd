@@ -1,6 +1,6 @@
 ---
 title: DANL Project
-subtitle: "Data-Driven Mastery: Unlocking Business Potential"
+subtitle: "DANL 200 Dataset Analyzation "
 author: 
   - Jayden Balcarczyk
   - Andrew Sarafin
