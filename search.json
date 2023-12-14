@@ -4,7 +4,7 @@
     "href": "blog-listing.html",
     "title": "Jayden’s Blog ",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\nDec 8, 2023\n\n\nJayden Balcarczyk\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\nDec 8, 2023\n\n\nJayden Balcarczyk\n\n\n5 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2023\n\n\nJayden Balcarczyk\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2023\n\n\nJayden Balcarczyk\n\n\n6 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\nOct 27, 2023\n\n\nYOUR NAME\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\nDec 8, 2023\n\n\nJayden Balcarczyk\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\nDec 8, 2023\n\n\nJayden Balcarczyk\n\n\n5 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2023\n\n\nJayden Balcarczyk\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2023\n\n\nJayden Balcarczyk\n\n\n7 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\nOct 27, 2023\n\n\nYOUR NAME\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -67,7 +67,7 @@
     "href": "project.html#summary-statistics",
     "title": "DANL Project",
     "section": "2.1 Summary Statistics",
-    "text": "2.1 Summary Statistics\n\nmpg <- ggplot2::mpg\n\n\n\n\n  \n\n\n\nskim(mpg) %>% \n  select(-n_missing)\n\n\nData summary\n\n\nName\nmpg\n\n\nNumber of rows\n234\n\n\nNumber of columns\n11\n\n\n_______________________\n\n\n\nColumn type frequency:\n\n\n\ncharacter\n6\n\n\nnumeric\n5\n\n\n________________________\n\n\n\nGroup variables\nNone\n\n\n\nVariable type: character\n\n\n\nskim_variable\ncomplete_rate\nmin\nmax\nempty\nn_unique\nwhitespace\n\n\n\n\nmanufacturer\n1\n4\n10\n0\n15\n0\n\n\nmodel\n1\n2\n22\n0\n38\n0\n\n\ntrans\n1\n8\n10\n0\n10\n0\n\n\ndrv\n1\n1\n1\n0\n3\n0\n\n\nfl\n1\n1\n1\n0\n5\n0\n\n\nclass\n1\n3\n10\n0\n7\n0\n\n\n\nVariable type: numeric\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nskim_variable\ncomplete_rate\nmean\nsd\np0\np25\np50\np75\np100\nhist\n\n\n\n\ndispl\n1\n3.47\n1.29\n1.6\n2.4\n3.3\n4.6\n7\n▇▆▆▃▁\n\n\nyear\n1\n2003.50\n4.51\n1999.0\n1999.0\n2003.5\n2008.0\n2008\n▇▁▁▁▇\n\n\ncyl\n1\n5.89\n1.61\n4.0\n4.0\n6.0\n8.0\n8\n▇▁▇▁▇\n\n\ncty\n1\n16.86\n4.26\n9.0\n14.0\n17.0\n19.0\n35\n▆▇▃▁▁\n\n\nhwy\n1\n23.44\n5.95\n12.0\n18.0\n24.0\n27.0\n44\n▅▅▇▁▁"
+    "text": "2.1 Summary Statistics\n\nrestaurant <- read_csv('https://bcdanl.github.io/data/DOHMH_NYC_Restaurant_Inspection.csv')\n\n\n\n\n  \n\n\n\nskim(restaurant) %>% \n  select(-n_missing)\n\n\nData summary\n\n\nName\nrestaurant\n\n\nNumber of rows\n17633\n\n\nNumber of columns\n12\n\n\n_______________________\n\n\n\nColumn type frequency:\n\n\n\ncharacter\n10\n\n\nnumeric\n2\n\n\n________________________\n\n\n\nGroup variables\nNone\n\n\n\nVariable type: character\n\n\n\n\n\n\n\n\n\n\n\n\nskim_variable\ncomplete_rate\nmin\nmax\nempty\nn_unique\nwhitespace\n\n\n\n\nDBA\n1\n1\n75\n0\n13914\n0\n\n\nBORO\n1\n5\n13\n0\n5\n0\n\n\nSTREET\n1\n5\n40\n0\n2038\n0\n\n\nCUISINE DESCRIPTION\n1\n4\n30\n0\n87\n0\n\n\nINSPECTION DATE\n1\n10\n10\n0\n751\n0\n\n\nACTION\n1\n33\n47\n0\n2\n0\n\n\nVIOLATION CODE\n1\n3\n5\n0\n60\n0\n\n\nVIOLATION DESCRIPTION\n1\n19\n940\n0\n101\n0\n\n\nCRITICAL FLAG\n1\n8\n12\n0\n2\n0\n\n\nGRADE\n1\n1\n1\n0\n3\n0\n\n\n\nVariable type: numeric\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nskim_variable\ncomplete_rate\nmean\nsd\np0\np25\np50\np75\np100\nhist\n\n\n\n\nCAMIS\n1\n47112537.51\n4197913.0\n30191841\n41551354\n50049290\n50094455\n50133690\n▁▁▃▁▇\n\n\nSCORE\n1\n10.44\n5.9\n0\n7\n10\n12\n86\n▇▁▁▁▁"
   },
   {
     "objectID": "project.html#mpg-and-a-type-of-cars",
@@ -404,5 +404,145 @@
     "title": "Classwork",
     "section": "",
     "text": "2 Question 1 - Billboard Charts\n\nThe following data is for Question 1:\n\n\nbillboard <- read_csv('https://bcdanl.github.io/data/billboard.csv')\n\n\n\n3 Q1a.\n\nDescribe how the distribution of rating varies across week 1, week 2, and week 3 using the faceted histogram.\n\n\n\n\n#Q1b. * Which artist(s) have the most number of tracks in billboard data.frame? * Do not double-count an artist’s tracks if they appear in multiple weeks."
+  },
+  {
+    "objectID": "project.html#top-5-dba-in-terms-of-score-by-each-boro",
+    "href": "project.html#top-5-dba-in-terms-of-score-by-each-boro",
+    "title": "DANL Project",
+    "section": "2.16 Top 5 DBA in terms of SCORE by each BORO",
+    "text": "2.16 Top 5 DBA in terms of SCORE by each BORO\n\nfiltered_data <- restaurant %>%\n  select(BORO, DBA, SCORE)\ngrouped_data <- filtered_data %>%\n  group_by(BORO, DBA) %>%\n  summarise(AVG_SCORE = mean(SCORE, na.rm = TRUE))\nranked_data <- grouped_data %>%\n  arrange(BORO, desc(AVG_SCORE)) %>%\n  group_by(BORO) %>%\n  mutate(rank = row_number())\ntop_5_dbas <- ranked_data %>%\n  filter(rank <= 5)\nprint(top_5_dbas)\n\n# A tibble: 25 × 4\n# Groups:   BORO [5]\n   BORO     DBA                             AVG_SCORE  rank\n   <chr>    <chr>                               <dbl> <int>\n 1 Bronx    bedford cafe & restaurant              49     1\n 2 Bronx    g & s                                  47     2\n 3 Bronx    el club valle restaurant               46     3\n 4 Bronx    el barril restaurant                   45     4\n 5 Bronx    luna cafe                              44     5\n 6 Brooklyn flaming grill and modern buffet        66     1\n 7 Brooklyn casa publica                           62     2\n 8 Brooklyn mi candilejas restaurant               62     3\n 9 Brooklyn kami sushi, yummy thai                 61     4\n10 Brooklyn fulton burger                          59     5\n# ℹ 15 more rows\n\n\n\nfiltered_data <- restaurant %>%\n  select(BORO, DBA, SCORE)\ngrouped_data <- filtered_data %>%\n  group_by(BORO, DBA) %>%\n  summarise(AVG_SCORE = mean(SCORE, na.rm = TRUE))\nranked_data <- grouped_data %>%\n  arrange(BORO, desc(AVG_SCORE)) %>%\n  group_by(BORO) %>%\n  mutate(rank = row_number())\ntop_5_dbas <- ranked_data %>%\n  filter(rank <= 5)\nggplot(top_5_dbas, aes(x = reorder(DBA, AVG_SCORE), y = AVG_SCORE, fill = BORO)) +\n  geom_bar(stat = \"identity\", position = \"dodge\") +\n  labs(title = \"Top 5 Highest Scoring DBAs in Each Borough\",\n       x = \"DBA\",\n       y = \"Average Score\") +\n  theme_minimal() +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))"
+  },
+  {
+    "objectID": "project.html#top-5-cuisine-description-in-each-boro",
+    "href": "project.html#top-5-cuisine-description-in-each-boro",
+    "title": "DANL Project",
+    "section": "2.19 Top 5 CUISINE DESCRIPTION in each BORO",
+    "text": "2.19 Top 5 CUISINE DESCRIPTION in each BORO\n\nfiltered_data <- restaurant %>%\n  select(BORO, `CUISINE DESCRIPTION`)\ncounted_data <- filtered_data %>%\n  count(BORO, `CUISINE DESCRIPTION`, sort = TRUE)\ntop_5_cuisines <- counted_data %>%\n  group_by(BORO) %>%\n  slice_max(n = 5, order_by = n)\nprint(top_5_cuisines)\n\n# A tibble: 25 × 3\n# Groups:   BORO [5]\n   BORO     `CUISINE DESCRIPTION`     n\n   <chr>    <chr>                 <int>\n 1 Bronx    American                224\n 2 Bronx    Chinese                 164\n 3 Bronx    Pizza                   145\n 4 Bronx    Latin American          117\n 5 Bronx    Chicken                  92\n 6 Brooklyn American                783\n 7 Brooklyn Chinese                 484\n 8 Brooklyn Coffee/Tea              383\n 9 Brooklyn Pizza                   295\n10 Brooklyn Caribbean               222\n# ℹ 15 more rows"
+  },
+  {
+    "objectID": "project.html#visualization-of-top-5-cuisine-description-in-each-boro",
+    "href": "project.html#visualization-of-top-5-cuisine-description-in-each-boro",
+    "title": "DANL Project",
+    "section": "2.20 Visualization of top 5 CUISINE DESCRIPTION in each BORO",
+    "text": "2.20 Visualization of top 5 CUISINE DESCRIPTION in each BORO\n\nggplot(top_5_cuisines, aes(x = reorder(`CUISINE DESCRIPTION`, n), y = n, fill = BORO)) +\n  geom_bar(stat = \"identity\", position = \"dodge\") +\n  labs(title = \"Top 5 Cuisine Descriptions in Each Borough\",\n       x = \"Cuisine Description\",\n       y = \"Count\") +\n  theme_minimal() +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +\n  facet_wrap(~ BORO, scales = \"free_y\", ncol = 2)"
+  },
+  {
+    "objectID": "project.html#ranking-boro-by-avg-score",
+    "href": "project.html#ranking-boro-by-avg-score",
+    "title": "DANL Project",
+    "section": "2.2 Ranking BORO by AVG SCORE",
+    "text": "2.2 Ranking BORO by AVG SCORE\n\nfiltered_data <- restaurant %>%\n  select(BORO, DBA, SCORE)\naverage_scores_by_boro <- filtered_data %>%\n  group_by(BORO, DBA) %>%\n  summarise(AVG_SCORE = mean(SCORE, na.rm = TRUE), .groups = 'drop')\naverage_score_by_boro <- average_scores_by_boro %>%\n  group_by(BORO) %>%\n  summarise(Overall_AVG_SCORE = mean(AVG_SCORE, na.rm = TRUE))\nprint(average_score_by_boro)\n\n# A tibble: 5 × 2\n  BORO          Overall_AVG_SCORE\n  <chr>                     <dbl>\n1 Bronx                      11.1\n2 Brooklyn                   10.6\n3 Manhattan                  10.4\n4 Queens                     11.2\n5 Staten Island              11.0"
+  },
+  {
+    "objectID": "project.html#visualization-of-ranking-boro-by-avg-score",
+    "href": "project.html#visualization-of-ranking-boro-by-avg-score",
+    "title": "DANL Project",
+    "section": "2.3 Visualization of ranking Boro by AVG SCORE",
+    "text": "2.3 Visualization of ranking Boro by AVG SCORE\n\nggplot(average_score_by_boro, aes(x = BORO, y = Overall_AVG_SCORE, fill = BORO)) +\n  geom_bar(stat = \"identity\") +\n  labs(title = \"Average Score of DBAs in Each Borough\",\n       x = \"Borough\",\n       y = \"Average Score\") +\n  theme_minimal() +\n  scale_x_discrete(labels = scales::wrap_format(10))"
+  },
+  {
+    "objectID": "project.html#amount-of-critical-critical-flag-by-boro",
+    "href": "project.html#amount-of-critical-critical-flag-by-boro",
+    "title": "DANL Project",
+    "section": "2.5 Amount of CRITICAL CRITICAL FLAG by BORO",
+    "text": "2.5 Amount of CRITICAL CRITICAL FLAG by BORO\n\nfiltered_data <- restaurant %>%\n  select(BORO, `CRITICAL FLAG`)\ncritical_flags_by_boro <- filtered_data %>%\n  filter(`CRITICAL FLAG` == \"Critical\") %>%\n  group_by(BORO) %>%\n  summarise(Critical_Flag_Count = n(), .groups = 'drop')\nprint(critical_flags_by_boro)\n\n# A tibble: 5 × 2\n  BORO          Critical_Flag_Count\n  <chr>                       <int>\n1 Bronx                         732\n2 Brooklyn                     2333\n3 Manhattan                    3464\n4 Queens                       2001\n5 Staten Island                 333"
+  },
+  {
+    "objectID": "project.html#analysis",
+    "href": "project.html#analysis",
+    "title": "DANL Project",
+    "section": "2.4 Analysis",
+    "text": "2.4 Analysis"
+  },
+  {
+    "objectID": "project.html#visualization-of-amount-of-critical-critical-flag-by-boro",
+    "href": "project.html#visualization-of-amount-of-critical-critical-flag-by-boro",
+    "title": "DANL Project",
+    "section": "2.6 Visualization of amount of CRITICAL CRITICAL FLAG by BORO",
+    "text": "2.6 Visualization of amount of CRITICAL CRITICAL FLAG by BORO\n\nggplot(critical_flags_by_boro, aes(x = BORO, y = Critical_Flag_Count, fill = BORO)) +\n  geom_bar(stat = \"identity\") +\n  labs(title = \"Count of Critical Flags by Borough\",\n       x = \"Borough\",\n       y = \"Critical Flag Count\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "project.html#analysis-1",
+    "href": "project.html#analysis-1",
+    "title": "DANL Project",
+    "section": "2.7 Analysis",
+    "text": "2.7 Analysis"
+  },
+  {
+    "objectID": "project.html#total-number-of-a-grade-by-boro",
+    "href": "project.html#total-number-of-a-grade-by-boro",
+    "title": "DANL Project",
+    "section": "2.8 Total number of A GRADE by BORO",
+    "text": "2.8 Total number of A GRADE by BORO\n\nfiltered_data <- restaurant %>%\n  select(BORO, GRADE)\na_grades_by_boro <- filtered_data %>%\n  filter(GRADE == \"A\") %>%\n  group_by(BORO) %>%\n  summarise(A_Grade_Count = n(), .groups = 'drop')\nprint(a_grades_by_boro)\n\n# A tibble: 5 × 2\n  BORO          A_Grade_Count\n  <chr>                 <int>\n1 Bronx                  1316\n2 Brooklyn               4222\n3 Manhattan              6382\n4 Queens                 3740\n5 Staten Island           645"
+  },
+  {
+    "objectID": "project.html#visualization-of-total-number-of-a-grade-by-boro",
+    "href": "project.html#visualization-of-total-number-of-a-grade-by-boro",
+    "title": "DANL Project",
+    "section": "2.9 Visualization of Total number of A GRADE by BORO",
+    "text": "2.9 Visualization of Total number of A GRADE by BORO\n\nggplot(a_grades_by_boro, aes(x = BORO, y = A_Grade_Count, fill = BORO)) +\n  geom_bar(stat = \"identity\") +\n  labs(title = \"Total Count of 'A' Grades by Borough\",\n       x = \"Borough\",\n       y = \"'A' Grade Count\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "project.html#analysis-2",
+    "href": "project.html#analysis-2",
+    "title": "DANL Project",
+    "section": "2.10 Analysis",
+    "text": "2.10 Analysis"
+  },
+  {
+    "objectID": "project.html#total-number-of-c-grade-by-boro",
+    "href": "project.html#total-number-of-c-grade-by-boro",
+    "title": "DANL Project",
+    "section": "2.11 Total number of C GRADE by BORO",
+    "text": "2.11 Total number of C GRADE by BORO\n\nfiltered_data <- restaurant %>%\n  select(BORO, GRADE)\nc_grades_by_boro <- filtered_data %>%\n  filter(GRADE == \"C\") %>%\n  group_by(BORO) %>%\n  summarise(C_Grade_Count = n(), .groups = 'drop')\nprint(c_grades_by_boro)\n\n# A tibble: 5 × 2\n  BORO          C_Grade_Count\n  <chr>                 <int>\n1 Bronx                    25\n2 Brooklyn                 84\n3 Manhattan                97\n4 Queens                   83\n5 Staten Island             5"
+  },
+  {
+    "objectID": "project.html#visualization-of-total-number-of-c-grade-by-boro",
+    "href": "project.html#visualization-of-total-number-of-c-grade-by-boro",
+    "title": "DANL Project",
+    "section": "2.12 Visualization of Total number of C GRADE by BORO",
+    "text": "2.12 Visualization of Total number of C GRADE by BORO\n\nfiltered_data <- restaurant %>%\n  select(BORO, DBA, GRADE)\na_grades_by_boro <- filtered_data %>%\n  filter(GRADE == \"C\") %>%\n  group_by(BORO, DBA) %>%\n  summarise(A_Grade_Count = n_distinct(DBA), .groups = 'drop')\nprint(a_grades_by_boro)\n\n# A tibble: 294 × 3\n   BORO  DBA                       A_Grade_Count\n   <chr> <chr>                             <int>\n 1 Bronx 3a's legacy salad & grill             1\n 2 Bronx african home restaurant               1\n 3 Bronx bambu juice bar                       1\n 4 Bronx bedford cafe & restaurant             1\n 5 Bronx bella pizza of bronx                  1\n 6 Bronx chickenfest azteca                    1\n 7 Bronx el barril restaurant                  1\n 8 Bronx el club valle restaurant              1\n 9 Bronx el nuevo bohio restaurant             1\n10 Bronx el nuevo roble billiards              1\n# ℹ 284 more rows\n\nggplot(a_grades_by_boro, aes(x = BORO, y = A_Grade_Count, fill = BORO)) +\n  geom_bar(stat = \"identity\") +\n  labs(title = \"Count of 'C' Grades by Borough\",\n       x = \"Borough\",\n       y = \"'C' Grade Count\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "project.html#analysis-3",
+    "href": "project.html#analysis-3",
+    "title": "DANL Project",
+    "section": "2.13 Analysis",
+    "text": "2.13 Analysis"
+  },
+  {
+    "objectID": "project.html#proportion-of-c-grade-by-boro",
+    "href": "project.html#proportion-of-c-grade-by-boro",
+    "title": "DANL Project",
+    "section": "2.14 Proportion of C GRADE by BORO",
+    "text": "2.14 Proportion of C GRADE by BORO\n\nfiltered_data <- restaurant %>%\n  select(BORO, DBA)\nfiltered_data$BORO[is.na(filtered_data$BORO)] <- 0\ntotal_dbas_by_boro <- filtered_data %>%\n  group_by(BORO) %>%\n  summarise(DBA_Count = n_distinct(DBA), .groups = 'drop')\nprint(total_dbas_by_boro)\n\n# A tibble: 5 × 2\n  BORO          DBA_Count\n  <chr>             <int>\n1 Bronx              1141\n2 Brooklyn           3964\n3 Manhattan          5404\n4 Queens             3404\n5 Staten Island       577"
+  },
+  {
+    "objectID": "project.html#proportion-of-c-grade-dba-in-each-boro",
+    "href": "project.html#proportion-of-c-grade-dba-in-each-boro",
+    "title": "DANL Project",
+    "section": "2.14 Proportion of C GRADE DBA in each BORO",
+    "text": "2.14 Proportion of C GRADE DBA in each BORO\n\nfiltered_data <- restaurant %>%\n  select(BORO, DBA)\nfiltered_data$BORO[is.na(filtered_data$BORO)] <- 0\ntotal_dbas_by_boro <- filtered_data %>%\n  group_by(BORO) %>%\n  summarise(DBA_Count = n_distinct(DBA), .groups = 'drop')\nprint(total_dbas_by_boro)\n\n# A tibble: 5 × 2\n  BORO          DBA_Count\n  <chr>             <int>\n1 Bronx              1141\n2 Brooklyn           3964\n3 Manhattan          5404\n4 Queens             3404\n5 Staten Island       577\n\n25 / 1141 * 100\n\n[1] 2.19106\n\n84 / 3964 * 100\n\n[1] 2.119072\n\n97 / 5404 * 100\n\n[1] 1.794967\n\n83 / 3404 * 100\n\n[1] 2.438308\n\n5 / 577 * 100\n\n[1] 0.8665511"
+  },
+  {
+    "objectID": "project.html#analysis-4",
+    "href": "project.html#analysis-4",
+    "title": "DANL Project",
+    "section": "2.15 Analysis",
+    "text": "2.15 Analysis"
+  },
+  {
+    "objectID": "project.html#average-score-of-top-5-dba-in-each-boro",
+    "href": "project.html#average-score-of-top-5-dba-in-each-boro",
+    "title": "DANL Project",
+    "section": "2.17 Average SCORE of Top 5 DBA in each BORO",
+    "text": "2.17 Average SCORE of Top 5 DBA in each BORO\n\n(49 + 47 + 46 + 45 + 44)/5\n\n[1] 46.2\n\n(66 + 62 + 62 + 61 + 59)/5\n\n[1] 62\n\n(71 + 65 + 61 + 60 + 59)/5\n\n[1] 63.2\n\n(86 + 67 + 65 + 58 + 57)/5\n\n[1] 66.6\n\n(38 + 32.5 + 31 + 30 + 28)/5\n\n[1] 31.9"
+  },
+  {
+    "objectID": "project.html#analysis-5",
+    "href": "project.html#analysis-5",
+    "title": "DANL Project",
+    "section": "2.18 Analysis",
+    "text": "2.18 Analysis"
   }
 ]
