@@ -230,10 +230,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="introduction" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<ul>
+<li>Throughout the semester, we learned several ways to analyze and depict data that may seem confusing at a first glance. We found the “restaurant” data set to be a great data set to use due to the depth and complexity of the information. Looking at the code we provided to analyze the data, we used a variety of different methods to describe the data as best as possible. We started with the skim function for some general information and organization. Next, we found the average scores of the restaurants among the different boroughs. By narrowing down the important boroughs, we then created several ggplot graphs including several bar charts to visualize the information provided. After in depth analytically procedures and visualization, we came to the conclusion that Manhattan has the overall best cuisine.</li>
+</ul>
 </section>
 <section id="data" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Data</h1>
-<p>The data.frame <code>mpg</code> contains a subset of the fuel economy data that the EPA makes available on <a href="https://fueleconomy.gov/" class="uri">https://fueleconomy.gov/</a>. It contains only models which had a new release every year between 1999 and 2008 - this was used as a proxy for the popularity of the car. <span class="emoji" data-emoji="oncoming_automobile">🚘</span></p>
+<ul>
+<li>The data.frame restaurant has 10 different variables including rating, location, grades of restaurants and many more. This will help us develop analysis on what boroughs have the best restaurants and where to go when in New York City.</li>
+</ul>
 <section id="summary-statistics" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="summary-statistics"><span class="header-section-number">2.1</span> Summary Statistics</h2>
 <div class="cell">
@@ -506,6 +511,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="analysis" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="analysis"><span class="header-section-number">2.4</span> Analysis</h2>
+<ul>
+<li>This bar chart exemplifies the relationship between each Borough in NYC on the x-axis and the overall average score on the y-axis. The average score is based on DBA (Doing Business As) entities. The overall average scores in decreasing order went as follows: Queens, Bronx, Staten Island, Brooklyn, Manhattan. Queens had the highest DBA average score of 11.2 and Manhattan had the lowest average at a score of 10.4</li>
+</ul>
 </section>
 <section id="amount-of-critical-critical-flag-by-boro" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="amount-of-critical-critical-flag-by-boro"><span class="header-section-number">2.5</span> Amount of <code>CRITICAL</code> <code>CRITICAL FLAG</code> by <code>BORO</code></h2>
@@ -545,6 +553,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="analysis-1" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="analysis-1"><span class="header-section-number">2.7</span> Analysis</h2>
+<ul>
+<li>This bar chart compares the relationship between specific Boroughs in NYC to the total number of critical flags in those Borough. Boroughs being on the x-axis and the critical flag variable on the y-axis. The critical flag score represents the restaurants that had an indicator of critical violation. Each critical flag counts once towards the total for the Borough it is geographically located in. The order in decreasing totals was: Manhattan, Brooklyn, Queens, Bronx, Staten Island. Manhattan had the most critical flags at a total of 3464 which will be looked at later as Manhattan has a lot more restaurants than some of the others. While Staten Island had the least amount of critical flags at 333.</li>
+</ul>
 </section>
 <section id="total-number-of-a-grade-by-boro" class="level2" data-number="2.8">
 <h2 data-number="2.8" class="anchored" data-anchor-id="total-number-of-a-grade-by-boro"><span class="header-section-number">2.8</span> Total number of A <code>GRADE</code> by <code>BORO</code></h2>
@@ -584,6 +595,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="analysis-2" class="level2" data-number="2.10">
 <h2 data-number="2.10" class="anchored" data-anchor-id="analysis-2"><span class="header-section-number">2.10</span> Analysis</h2>
+<p>-The bar chart above represents an R code used to manipulate data as well as visualize it. This manipulation is done so to exemplify the amount of restaurants that received a grade A from their inspection and summarizes and ranks each Borough based on their total number of “A” grades. With this manipulation all other grades are voided because the only desired grade for this bar chart is “A”. Boroughs are represented on the x-axis as the y-axis represents number of total Grade A inspections in the specific Borough. The ranking of Boroughs by total number of grade A’s from most to least is as follows: Manhattan, Brooklyn, Queens, Bronx, Staten Island. Manhattan had by far the most with 6382 again partially due to the sheer amount of restaurants in the Borough. Staten Island had the least amount of Grade A restaurant inspections with 645.</p>
 </section>
 <section id="total-number-of-c-grade-by-boro" class="level2" data-number="2.11">
 <h2 data-number="2.11" class="anchored" data-anchor-id="total-number-of-c-grade-by-boro"><span class="header-section-number">2.11</span> Total number of C <code>GRADE</code> by <code>BORO</code></h2>
@@ -646,6 +658,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="analysis-3" class="level2" data-number="2.13">
 <h2 data-number="2.13" class="anchored" data-anchor-id="analysis-3"><span class="header-section-number">2.13</span> Analysis</h2>
+<ul>
+<li>A very similar example to the chart in 2.9 but instead of using data manipulation to find grade A inspection, we are looking to exemplify the inspections that received a “C” grade. The x-axis continues to represent the Boroughs of NYC and the y-axis this time represents the total number of restaurants that received a “C” grade in those Boroughs. No other grades are accounted for in this chart as they are dismissed. The ranking from most to least are as follows: Manhattan, Brooklyn, Queens, Bronx, Staten Island. Manhattan had a total of 97 which was the most and Staten Island had least amount of DBA’s with a inspection grade of “C” with 5.</li>
+</ul>
 </section>
 <section id="proportion-of-c-grade-dba-in-each-boro" class="level2" data-number="2.14">
 <h2 data-number="2.14" class="anchored" data-anchor-id="proportion-of-c-grade-dba-in-each-boro"><span class="header-section-number">2.14</span> Proportion of C <code>GRADE</code> <code>DBA</code> in each <code>BORO</code></h2>
@@ -691,6 +706,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="analysis-4" class="level2" data-number="2.15">
 <h2 data-number="2.15" class="anchored" data-anchor-id="analysis-4"><span class="header-section-number">2.15</span> Analysis</h2>
+<ul>
+<li>In this section of the analysis our goal was to determine the proportion of C ‘GRADE’ ‘DBA’ in each borough. Looking at the calculations above we took the total amount of restaurants with a grade of C in each borough and divided that amount by the total number of restaurants in that borough. Using this method we were able to get an accurate percentage of how many restaurants were given a grade of C in the respective boroughs. We concluded that Staten Island had the least amount of C grade restaurants at 0.87%, while Queens had the highest percentage of C grade boroughs at 2.44%.</li>
+</ul>
 </section>
 <section id="top-5-dba-in-terms-of-score-by-each-boro" class="level2" data-number="2.16">
 <h2 data-number="2.16" class="anchored" data-anchor-id="top-5-dba-in-terms-of-score-by-each-boro"><span class="header-section-number">2.16</span> Top 5 <code>DBA</code> in terms of <code>SCORE</code> by each <code>BORO</code></h2>
@@ -776,6 +794,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="analysis-5" class="level2" data-number="2.18">
 <h2 data-number="2.18" class="anchored" data-anchor-id="analysis-5"><span class="header-section-number">2.18</span> Analysis</h2>
+<ul>
+<li>By filtering, summarizing, then converting the data to a ggplot, we were able to sort the highest scoring restaurants by each borough. Looking at the graph, Staten Island has the lowest scoring restaurants, the Bronx has slightly higher scoring restaurants, Queens has a mix of both middle of the pack scoring restaurants, while also having the highest scoring restaurant. Brooklyn and Manhattan both have middle to high scoring restaurants. Using the average scores we calculated the overall rating, the top rated borough is Queens with a score of 66.6 while the lowest rating is Staten Island with an average rating of 31.9.</li>
+</ul>
 </section>
 <section id="top-5-cuisine-description-in-each-boro" class="level2" data-number="2.19">
 <h2 data-number="2.19" class="anchored" data-anchor-id="top-5-cuisine-description-in-each-boro"><span class="header-section-number">2.19</span> Top 5 <code>CUISINE DESCRIPTION</code> in each <code>BORO</code></h2>
@@ -826,6 +847,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="conclusion" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Conclusion</h1>
+<ul>
+<li>While working through the restaurant data frame we noticed 3 key takeaways. The biggest takeaway being that Manhattan has the highest quality restaurants with this being contributed to them having the most restaurants out of the boroughs but they also have the highest quality of restaurants as seen in the data. The next takeaway is that Staten Island while being very small it has very quality restaurants because they recorded the least amount of C grades which shows a lot of their restaurants are better than average. The last takeaway is that the top cuisine over the 5 boroughs is American food with overwhelming popularity in Brooklyn, Staten Island, and Manhattan. The restaurant data frame has showed us many key takeaways and where to go in New York City for food.</li>
+</ul>
 
 
 </section>
